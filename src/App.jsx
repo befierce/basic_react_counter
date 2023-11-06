@@ -6,12 +6,15 @@ import './App.css'
 function App() {
 
   // let counter = 15
-  let [counter,setCounter] = useState(0)
+  let [counter,setCounter] = useState(0);
   const addValue = ()=>{
     counter = counter+1;
     setCounter(counter)
   }
-
+  const removeValue=()=>{
+    counter = counter-1;
+    setCounter(counter)
+  }
 
   return (
     <>
@@ -20,7 +23,8 @@ function App() {
       <button 
       onClick={addValue}>Add Value</button>
       <br></br>
-      <button> Remove Value</button>
+      <button
+      onClick={removeValue}> Remove Value: {counter}</button>
     </>
   )
 }
